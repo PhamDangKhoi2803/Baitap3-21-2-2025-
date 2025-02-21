@@ -17,6 +17,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_LinearLayout;
+    private Button btn_Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +48,16 @@ public class MainActivity extends AppCompatActivity {
             int newBackground = isChecked ? backgrounds[1] : backgrounds[0];
             rootLayout.setBackgroundResource(newBackground);
         });
-
+        //3. Linear Layout
         btn_LinearLayout = findViewById(R.id.button_linearlayout);
         btn_LinearLayout.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LinearLayoutActivity.class);
+            startActivity(intent);
+        });
+        //4. Giao diện Login
+        btn_Login = findViewById(R.id.button_login);
+        btn_Login.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         });
     }
