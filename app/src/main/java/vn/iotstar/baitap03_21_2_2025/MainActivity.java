@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_LinearLayout;
     private Button btn_Login;
 
+    private Button btn_Register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
         btn_Login = findViewById(R.id.button_login);
         btn_Login.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
+
+        btn_Register = findViewById(R.id.button_register);
+        btn_Register.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
     }

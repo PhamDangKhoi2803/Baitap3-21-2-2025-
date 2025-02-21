@@ -5,8 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button_Facebook"
+        android:layout_width="148dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#D4D4DB"
+        android:drawableEnd="@drawable/facebook"
+        android:text="Facebook"
+        android:textColor="#3F51B5"
+        android:textColorLink="#9C27B0"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#3F51B5"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/button_Email"
+        android:layout_width="148dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#D4D4DB"
+        android:drawableEnd="@drawable/google"
+        android:text="Google"
+        android:textColor="#3F51B5"
+        android:textColorLink="#9C27B0"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Register"
+        app:layout_constraintStart_toEndOf="@+id/button_Facebook"
+        app:strokeColor="#3F51B5"
+        app:strokeWidth="2dp" />
+
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/editTextEmail"
         android:layout_width="350dp"
         android:layout_height="54dp"
         android:layout_marginStart="30dp"
@@ -15,31 +49,13 @@
         android:layout_marginBottom="267dp"
         android:drawableStart="@drawable/email"
         android:ems="10"
+        android:hint="  Email"
         android:inputType="text"
-        android:text="  Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="350dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="200dp"
-        android:drawableStart="@drawable/password"
-        android:ems="10"
-        android:inputType="text"
-        android:text="  Password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -76,5 +92,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/btn_arraw1" />
+
+    <TextView
+        android:id="@+id/textView_Register"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:text="Register"
+        android:textColor="#3F51B5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="354dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="13dp"
+        android:drawableStart="@drawable/password"
+        android:ems="10"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
