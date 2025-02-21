@@ -13,4 +13,19 @@
         android:layout_height="wrap_content"
         android:text="Thay đổi hình nền"
         android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/button_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="558dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="98dp"
+        android:text="Linear Layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchTheme" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

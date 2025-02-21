@@ -1,7 +1,9 @@
 package vn.iotstar.baitap03_21_2_2025;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Switch;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button btn_LinearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
         switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
             int newBackground = isChecked ? backgrounds[1] : backgrounds[0];
             rootLayout.setBackgroundResource(newBackground);
+        });
+
+        btn_LinearLayout = findViewById(R.id.button_linearlayout);
+        btn_LinearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LinearLayoutActivity.class);
+            startActivity(intent);
         });
     }
 }
